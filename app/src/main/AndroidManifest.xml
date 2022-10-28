@@ -33,6 +33,22 @@
                 android:value=""
                 />
         </activity>
+        <activity
+            android:name=".Views.ui.activities.SignUpActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""
+                />
+        </activity>
+        <activity
+            android:name=".Views.ui.activities.HomeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""
+                />
+        </activity>
     </application>
 
 </manifest>
