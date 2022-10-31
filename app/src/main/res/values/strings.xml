@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">UNLeeG6</string>
     <string name="enviar">Enviar</string>
+    <string name="favorite">Favorito</string>
+    <string name="content_description_favorite">Libros Favoritos</string>
+    <string name="search">Buscar</string>
+    <string name="content_description_search">Buscar Libro</string>
+    <string name="more">Ver más</string>
+    <string name="content_description_more">más contenido</string>
 </resources>

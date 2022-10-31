@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navHome"
+        android:title= "Inicio"
+        android:icon="@drawable/ic_outline_home_24"
+        />
+    <item
+        android:id="@+id/navSearch"
+        android:title= "Buscar"
+        android:icon="@drawable/ic_outline_search_24"
+        />
+    <item
+        android:id="@+id/navCar"
+        android:title= "Shopping"
+        android:icon="@drawable/ic_outline_car_24"
+        />
+    <item
+        android:id="@+id/navSetting"
+        android:title= "Configuraciones"
+        android:icon="@drawable/ic_outline_settings_24"
+        />
+
+</menu>
