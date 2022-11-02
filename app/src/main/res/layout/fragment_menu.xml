@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/menufragment"
     android:background="@color/white"
+    tools:context=".Views.ui.fragments.MenuFragment"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,19 +27,19 @@
                 android:layout_height="120dp"
                 android:layout_alignParentRight="true"
                 android:src="@mipmap/ic_launcher"></ImageView>
+
             <TextView
                 android:layout_width="280dp"
                 android:layout_height="115dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="9dp"
-                android:layout_marginEnd="81dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="89dp"
                 android:gravity="center"
                 android:text="¡Bienvenid@!"
                 android:textColor="@color/black"
                 android:textSize="40sp"
-                android:textStyle="bold"
-                ></TextView>
+                android:textStyle="bold"></TextView>
         </RelativeLayout>
         <ScrollView
             android:layout_width="match_parent"

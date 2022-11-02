@@ -7,4 +7,6 @@
     <string name="content_description_search">Buscar Libro</string>
     <string name="more">Ver más</string>
     <string name="content_description_more">más contenido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
