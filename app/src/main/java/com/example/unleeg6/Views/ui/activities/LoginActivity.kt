@@ -2,7 +2,9 @@ package com.example.unleeg6.Views.ui.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.example.unleeg6.R
 import com.example.unleeg6.databinding.ActivityMainBinding
 class LoginActivity: AppCompatActivity() {
@@ -22,5 +24,11 @@ class LoginActivity: AppCompatActivity() {
         signup.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
         }
+
+        val txtNewPass= findViewById<TextView>(R.id.textViewForgotPassword)
+        txtNewPass.setOnClickListener {
+            startActivity(Intent(this,SignUpActivity::class.java))
+        }
+
     }
 }
