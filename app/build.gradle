@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -38,6 +39,9 @@ android {
 
 dependencies {
 
+    //Añadimos la dependencia para OpenStreetMap
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
+
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
@@ -45,6 +49,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:24.4.0'
 
     implementation "com.squareup.picasso:picasso:2.8"
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
