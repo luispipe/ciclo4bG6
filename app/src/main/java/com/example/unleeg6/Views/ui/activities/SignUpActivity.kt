@@ -20,7 +20,8 @@ class SignUpActivity: AppCompatActivity(){
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var dbReference: DatabaseReference
     lateinit var database:FirebaseDatabase
-
+    lateinit var name:EditText
+    lateinit var birthday:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -28,23 +29,24 @@ class SignUpActivity: AppCompatActivity(){
         database= FirebaseDatabase.getInstance()
         dbReference= database.reference.child("User")
         home= findViewById(R.id.register)
-        val name= findViewById<EditText>(R.id.signupName)
+        name= findViewById(R.id.signupName)
         val email= findViewById<EditText>(R.id.signupEmail)
-        val birthday= findViewById<EditText>(R.id.signupBirthday)
+        birthday= findViewById(R.id.signupBirthday)
         val password= findViewById<EditText>(R.id.signupPassword)
         home.setOnClickListener {
-            createUser(email.text.toString(),password.text.toString(),
-                name.text.toString(),birthday.text.toString())
+            createUser(email.text.toString(),password.text.toString())
         }
     }
-    private fun createUser(email:String, password:String, name:String, birthday:String){
+    private fun createUser(email:String, password:String){
+        val na:String= name.text.toString()
+        val bi:String= birthday.text.toString()
         firebaseAuth.createUserWithEmailAndPassword(email,password).
         addOnCompleteListener(this){
             Task->if (Task.isSuccessful){
                 val user=firebaseAuth.currentUser
                 val userdb= dbReference.child(user?.uid.toString())
-                userdb.child("name").setValue(name)
-                userdb.child("birthday").setValue(birthday)
+                userdb.child("name").setValue(na)
+                userdb.child("birthday").setValue(bi)
 
                 startActivity(Intent(this,LoginActivity::class.java))
             }
