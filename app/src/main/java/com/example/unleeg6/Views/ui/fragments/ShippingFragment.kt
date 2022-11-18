@@ -76,7 +76,11 @@ class ShippingFragment : Fragment(), OnMapReadyCallback {
        val colombia = LatLng(5.070275,-75.513817)
         googleMap?.let {
             this.mMap=it
-            googleMap.addMarker(MarkerOptions().position(colombia))
+            googleMap.addMarker(
+                MarkerOptions()
+                    .position(colombia)
+                    .title("Libreria UNLeeG6")
+            )
         }
 
         enableLocation()

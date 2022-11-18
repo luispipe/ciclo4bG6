@@ -14,20 +14,20 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
 
 class SignUpActivity: AppCompatActivity(){
     lateinit var home: Button
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var dbReference: DatabaseReference
-    lateinit var database:FirebaseDatabase
+
     lateinit var name:EditText
     lateinit var birthday:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         firebaseAuth= Firebase.auth
-        database= FirebaseDatabase.getInstance()
-        dbReference= database.reference.child("User")
+        dbReference= Firebase.database.reference.child("User")
         home= findViewById(R.id.register)
         name= findViewById(R.id.signupName)
         val email= findViewById<EditText>(R.id.signupEmail)
